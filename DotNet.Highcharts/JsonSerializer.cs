@@ -88,7 +88,7 @@ namespace DotNet.Highcharts
         {
             if (obj == null)
                 return NULL_STRING;
-            if (obj.GetType().IsPrimitive || obj is decimal || obj is String || obj is Color || obj is DateTime)
+            if (obj.GetType().IsPrimitive || obj is decimal || obj is String || obj is Color || obj is DateTime || obj is Number)
             {
                 return GetValue(obj, obj.GetType(), GetJsonFormatter(null));
             }
